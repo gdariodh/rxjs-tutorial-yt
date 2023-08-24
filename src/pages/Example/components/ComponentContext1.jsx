@@ -1,5 +1,15 @@
-import React from "react";
+import { useExampleContext } from "../context/example.context";
 
 export default function ComponentContext1() {
-  return <div>ComponentContext1</div>;
+  const { setExampleContextValue } = useExampleContext();
+
+  const handleClick = () => {
+    setExampleContextValue("Hola, soy un value enviado por context");
+  };
+
+  return (
+    <div>
+      <button onClick={handleClick}>Enviar Info por context</button>
+    </div>
+  );
 }

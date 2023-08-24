@@ -6,8 +6,11 @@ import Example from "./pages/Example/Example";
 function App() {
   return (
     <div className="App">
-      <ComponentOne />
-      <ComponentTwo />
+      <div>
+        <h2>RXJS</h2>
+        <ComponentOne />
+        <ComponentTwo />
+      </div>
 
       <Example />
     </div>

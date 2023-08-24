@@ -1,5 +1,11 @@
-import React from "react";
+import { useExampleContext } from "../context/example.context";
 
 export default function ComponentContext2() {
-  return <div>ComponentContext2</div>;
+  const { exampleContextValue } = useExampleContext();
+
+  return (
+    <div>
+      <p>El value es: {exampleContextValue}</p>
+    </div>
+  );
 }
