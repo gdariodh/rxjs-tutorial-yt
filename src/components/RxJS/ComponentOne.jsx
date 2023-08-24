@@ -1,5 +1,5 @@
 import React from "react";
-import { sharingInformationService } from "../services/sharing-information.service";
+import { sharingInformationService } from "../../services/sharing-information.service";
 
 export default function ComponentOne() {
   const handleClick = () => {

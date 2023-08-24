@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { sharingInformationService } from "../services/sharing-information.service";
+import { sharingInformationService } from "../../services/sharing-information.service";
 
 export default function ComponentTwo() {
   // we use $ when is an observable or async variable
