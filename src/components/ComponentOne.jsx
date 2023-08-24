@@ -3,12 +3,17 @@ import { sharingInformationService } from "../services/sharing-information.servi
 
 export default function ComponentOne() {
   const handleClick = () => {
-    sharingInformationService.setSubject("Hola");
+    sharingInformationService.setSubject(true);
+  };
+
+  const handleClickNo = () => {
+    sharingInformationService.setSubject(false);
   };
 
   return (
     <div>
       <button onClick={handleClick}>Enviar information</button>
+      <button onClick={handleClickNo}>No Enviar information</button>
     </div>
   );
 }
