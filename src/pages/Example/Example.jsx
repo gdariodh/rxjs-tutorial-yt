@@ -6,7 +6,6 @@ export default function Example() {
   return (
     <div>
       <ExampleProvider>
-        <h2>Example Page - Context</h2>
         <ComponentContext1 />
         <ComponentContext2 />
       </ExampleProvider>
