@@ -1,5 +1,6 @@
 import { Provider } from "react-redux";
-import store from "./redux/store";
+import store, { persistor } from "./redux/store";
+import { PersistGate } from "redux-persist/integration/react";
 import "./App.css";
 import ComponentOne from "./components/RxJS/ComponentOne";
 import ComponentTwo from "./components/RxJS/ComponentTwo";
@@ -11,22 +12,24 @@ function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        <div>
-          <h2>RXJS</h2>
-          <ComponentOne />
-          <ComponentTwo />
-        </div>
+        <PersistGate loading={null} persistor={persistor}>
+          <div>
+            <h2>RXJS</h2>
+            <ComponentOne />
+            <ComponentTwo />
+          </div>
 
-        <div>
-          <h2>Example Page - Context</h2>
-          <Example />
-        </div>
+          <div>
+            <h2>Example Page - Context</h2>
+            <Example />
+          </div>
 
-        <div>
-          <h2>Redux</h2>
-          <ComponentRedux1 />
-          <ComponentRedux2 />
-        </div>
+          <div>
+            <h2>Redux</h2>
+            <ComponentRedux1 />
+            <ComponentRedux2 />
+          </div>
+        </PersistGate>
       </Provider>
     </div>
   );
